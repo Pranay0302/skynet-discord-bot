@@ -2,12 +2,12 @@ require('dotenv').config(); // global function
 
 const Discord = require('discord.js')
 const client = new Discord.Client();
-
+const config = require('../config.json');
 
 
 client.on('ready', () => {
     console.log(`${client.user.tag} has logged in`);
-
+    console.log(`${config.botinfo.name} is version ${config.botinfo.version}`);
     client.user.setActivity("planet earth", { type: "WATCHING" });
 })
 
