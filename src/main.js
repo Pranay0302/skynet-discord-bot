@@ -33,6 +33,10 @@ client.on('message', message => {
             .setTitle('be happy')
             .setDescription(':smile: :smiley: :zany_face:\n hell yeah bruh');
         message.channel.send(embed);
+    } else if (message.content === `${config.prefix}total`) {
+        message.channel.send(`total no. of members: ${message.guild.memberCount}`);
+    } else if (message.content === `${config.prefix}ID`) {
+        message.channel.send(`${message.author}'s ID is ${message.author.id}`);
     }
 });
 
