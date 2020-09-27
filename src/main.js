@@ -28,38 +28,39 @@ client.on('message', message => {
 
     const args = message.content.slice(config.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
+    cmd = client.commands.get(command);
 
 
     if (command === 'beep') {
-        client.commands.get('beep').execute(message, args);
+        cmd.execute(message, args);
     }
 
     if (command === 'shit') {
-        client.commands.get('shit').execute(message, args);
+        cmd.execute(message, args);
     }
 
     if (command === 'sad') {
-        client.commands.get('sad').execute(message, args);
+        cmd.execute(message, args);
     }
 
     if (command === 'happy') {
-        client.commands.get('happy').execute(message, args);
+        cmd.execute(message, args);
     }
 
     if (command === 'damn') {
-        client.commands.get('damn').execute(message, args);
+        cmd.execute(message, args);
     }
 
     if (command === 'nice') {
-        client.commands.get('nice').execute(message, args);
+        cmd.execute(message, args);
     }
 
     if (command === 'id') {
-        client.commands.get('id').execute(message, args);
+        cmd.execute(message, args);
     }
 
     if (command === 'total') {
-        client.commands.get('total').execute(message, args);
+        cmd.execute(message, args);
     }
 
 });
