@@ -65,6 +65,9 @@ client.on('message', message => {
     if (command === '69') {
         cmd.execute(message, args);
     }
+    if (command === 'cat') {
+        cmd.execute(message, args);
+    }
 
 });
 
