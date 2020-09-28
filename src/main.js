@@ -62,6 +62,9 @@ client.on('message', message => {
     if (command === 'total') {
         cmd.execute(message, args);
     }
+    if (command === '69') {
+        cmd.execute(message, args);
+    }
 
 });
 
