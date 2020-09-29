@@ -68,6 +68,9 @@ client.on('message', message => {
     if (command === 'cat') {
         cmd.execute(message, args);
     }
+    if (command === 'mofo') {
+        cmd.execute(message, args);
+    }
 
 });
 
