@@ -77,6 +77,9 @@ client.on("message", (message) => {
     if (command === 'saymyname') {
         cmd.execute(message, args);
     }
+    if (command === 'right') {
+        cmd.execute(message, args);
+    }
 });
 
 client.login(process.env.BOT_TOKEN); // process basically includes everything about the machine
