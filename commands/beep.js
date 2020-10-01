@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'beep',
-    description: 'beep command',
+    name: "beep",
+    description: "beep command",
     execute(message, args) {
-        message.channel.send('boop');
-    }
-}
+        message.channel.send("boop");
+    },
+};
