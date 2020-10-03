@@ -1,3 +1,5 @@
+//@ts-check
+
 require("dotenv").config(); // global function
 
 const Discord = require("discord.js");
