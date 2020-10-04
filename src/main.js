@@ -1,5 +1,3 @@
-//@ts-check
-
 require("dotenv").config(); // global function
 
 const Discord = require("discord.js");
@@ -83,6 +81,9 @@ client.on("message", (message) => {
         cmd.execute(message, args);
     }
     if (command === 'cj') {
+        cmd.execute(message, args);
+    }
+    if (command === 'latency') {
         cmd.execute(message, args);
     }
 });
