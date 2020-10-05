@@ -3,6 +3,6 @@ module.exports = {
     description: 'checking the latency commnad',
     execute: async(message, args) => {
         const lat = await message.channel.send("checking...");
-        message.channel.send(`Latency: ${Math.floor( lat.createdTimestamp - message.createdTimestamp)} ms.`);
+        message.channel.send(`Latency: ${Math.floor( lat.createdTimestamp - message.createdTimestamp)/10} ms.`);
     }
 }
