@@ -1,0 +1,6 @@
+#!/bin/bash
+npm install dotenv
+npm install discord.js
+npm install superagent
+npm install node-fetch
+ls node_modules
