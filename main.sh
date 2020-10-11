@@ -12,7 +12,7 @@ stop_process() {
 run_again() {
     cd ~/SKYNET
     rm nohup.out
-    /home/ubuntu/.nvm/versions/node/v14.13.0/bin/npm run start
+    nohup /home/ubuntu/.nvm/versions/node/v14.13.0/bin/node src/main.js &
 }
 
 send_mail() {
