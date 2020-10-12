@@ -18,6 +18,7 @@ for (const file of commandFiles) {
 client.on("ready", () => {
     console.log(`${client.user.tag} has logged in`);
     console.log(`${config.botinfo.name} is version ${config.botinfo.version}`);
+
     client.user.setActivity("girlfriend simulator", { type: "PLAYING" })
         .then(param => {
             console.log(`activity set to ${param.activities[0].name}`);
