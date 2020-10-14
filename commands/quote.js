@@ -17,9 +17,9 @@ module.exports = {
         }
 
         const embed = new Discord.MessageEmbed()
-            .setTitle(body['data']['quote'])
-            .setDescription(`character: ${body['data']['character']}`)
-            .setFooter(`anime: ${body['data']['anime']}`)
+            .setTitle(body.data[0].quote)
+            .setDescription(`character: ${body.data[0].character}`)
+            .setFooter(`anime: ${body.data[0].anime}`)
             .setColor(0xfa8072)
 
 
