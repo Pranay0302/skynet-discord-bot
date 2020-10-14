@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const superagent = require('superagent');
 
 module.exports = {
@@ -14,6 +15,14 @@ module.exports = {
         if (!body) {
             message.channel.send("oops");
         }
-        message.channel.send(body.data);
+
+        const embed = new Discord.MessageEmbed()
+            .setTitle(body['data']['quote'])
+            .setDescription(`character: ${body['data']['character']}`)
+            .setFooter(`anime: ${body['data']['anime']}`)
+            .setColor(0xfa8072)
+
+
+        message.channel.send(embed);
     }
 }
