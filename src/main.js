@@ -19,12 +19,12 @@ client.on("ready", () => {
     console.log(`${client.user.tag} has logged in`);
     console.log(`${config.botinfo.name} is version ${config.botinfo.version}`);
 
-    client.user.setActivity("ROBLOX", { type: "PLAYING" })
-        .then(param => {
+    client.user
+        .setActivity("Genshin Impact", { type: "PLAYING" })
+        .then((param) => {
             console.log(`activity set to ${param.activities[0].name}`);
         })
         .catch(console.error);
-
 });
 
 client.on("message", (message) => {
@@ -77,25 +77,25 @@ client.on("message", (message) => {
     if (command === "intro") {
         cmd.execute(message, args);
     }
-    if (command === 'danger') {
+    if (command === "danger") {
         cmd.execute(message, args);
     }
-    if (command === 'saymyname') {
+    if (command === "saymyname") {
         cmd.execute(message, args);
     }
-    if (command === 'right') {
+    if (command === "right") {
         cmd.execute(message, args);
     }
-    if (command === 'cj') {
+    if (command === "cj") {
         cmd.execute(message, args);
     }
-    if (command === 'latency') {
+    if (command === "latency") {
         cmd.execute(message, args);
     }
-    if (command === 'joke') {
+    if (command === "joke") {
         cmd.execute(message, args);
     }
-    if (command === 'quote') {
+    if (command === "quote") {
         cmd.execute(message, args);
     }
 });
