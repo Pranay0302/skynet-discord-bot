@@ -95,9 +95,6 @@ client.on("message", (message) => {
     if (command === "joke") {
         cmd.execute(message, args);
     }
-    if (command === "quote") {
-        cmd.execute(message, args);
-    }
     if (command === "help") {
         cmd.execute(message, args);
     }
