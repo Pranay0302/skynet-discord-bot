@@ -15,18 +15,6 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-client.on("ready", () => {
-    console.log(`${client.user.tag} has logged in`);
-    console.log(`${config.botinfo.name} is version ${config.botinfo.version}`);
-
-    client.user
-        .setActivity("Genshin Impact", { type: "PLAYING" })
-        .then((param) => {
-            console.log(`activity set to ${param.activities[0].name}`);
-        })
-        .catch(console.error);
-});
-
 client.on("message", (message) => {
     if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
@@ -100,4 +88,16 @@ client.on("message", (message) => {
     }
 });
 
-client.login(process.env.BOT_TOKEN); // process basically includes everything about the machine
+client.login(process.env.BOT_TOKEN)
+    .then(function() {
+    console.log(`Logged in as the ${client.user.tag}!`);
+    console.log(`${config.botinfo.name} is version ${config.botinfo.version}`);
+    client.user
+        .setActivity("Genshin Impact", { type: "PLAYING" })
+        .then((param) => {
+            console.log(`activity set to ${param.activities[0].name}`);
+        })
+})
+    .catch(function (error) {
+        console.log(error);
+    }); // process basically includes everything about the machine
